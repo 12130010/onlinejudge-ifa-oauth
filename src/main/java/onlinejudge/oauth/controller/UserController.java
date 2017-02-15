@@ -22,4 +22,10 @@ public class UserController {
 	public @ResponseBody String getWellcome() {
 		return "Hello";
 	}
+	
+	@RequestMapping(value = "/current", method = RequestMethod.GET)
+	@ResponseBody
+	public Principal currentUser(Principal principal){
+		return principal;
+	}
 }
